@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Module 20</title>
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <a><img class="header__logo" src="./src/img/Logo_SkillDrive.svg" alt="logo SkillDrive"></a>
+            <nav class="header__navigation">
+                <a class="header__link" href="./module20_about_us.html">О нас</a>
+                <a class="header__link" href="">Условия</a>
+                <a class="header__link" href="./module20_questions.html">Частые вопросы</a>
+            </nav>
+            <button class="header__login">
+                Войти
+            </button>
+            <img class="header__mob-menu" src="src\img\menu-mobile.svg" alt="mobile-menu">
+        </header>
+        <main>
+            <section class="frequent-questions">
+                <img src="./src/img/frequent_questions.svg" alt="logo frequent questions">          
+                <h1>Частые вопросы</h1>          
+                <p class="frequent-questions__text">Отвечаем на вопросы, которые у вас могут возникнуть.</p> 
+            
+                <div class="frequent-questions__collapsible-wrapper">
+                    <button class="frequent-questions__collapsible-wrapper-item">Могу ли я отменить бронь?</button>
+                    <div class="frequent-questions__collapsible-wrapper-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    
+                    <button class="frequent-questions__collapsible-wrapper-item">Могу ли я вернуть деньги, если не подошёл автомобиль?</button>
+                    <div class="frequent-questions__collapsible-wrapper-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+
+                    <button class="frequent-questions__collapsible-wrapper-item">Что делать, если случилось ДТП?</button>
+                    <div class="frequent-questions__collapsible-wrapper-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+
+                    <button class="frequent-questions__collapsible-wrapper-item">Могу ли я оставить автомобиль в удобном для меня месте?</button>
+                    <div class="frequent-questions__collapsible-wrapper-content">
+                        <p>Данный вопрос обсуждается с собственником, но как правило автомобиль нужно вернуть туда, где вы его получили.</p>
+                    </div>
+
+                    <button class="frequent-questions__collapsible-wrapper-item">Что делать, если собственник просит заплатить ему напрямую?</button>
+                    <div class="frequent-questions__collapsible-wrapper-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+
+                    <button class="frequent-questions__collapsible-wrapper-item">Должен ли я заправлять автомобиль?</button>
+                    <div class="frequent-questions__collapsible-wrapper-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>    
+            </section>
+            
+            <script>
+                var coll = document.getElementsByClassName("frequent-questions__collapsible-wrapper-item");
+                var i;
+                
+                for (i = 0; i < coll.length; i++) {
+                  coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight){
+                      content.style.maxHeight = null;
+                      content.style.marginTop = null;
+                      content.style.marginBottom = null; 
+                    } else {
+                      content.style.maxHeight = content.scrollHeight + "px";
+                      content.style.marginTop = "20px";
+                      content.style.marginBottom = "40px";   
+                    } 
+                        
+
+                  });
+                }
+                document.addEventListener("DOMContentLoaded", pageLoaded);
+                </script>    
+
+        </main>
+        <footer class="footer">
+            <p class="footer__copyright">© SkillDrive Inc. 2020</p>
+            <div class="footer__container">
+                <a class="footer__container-link" href="" target="_blank" rel="nofollow"><img src="./src/img/logo_vk.svg" alt="logo Вконтакте"></a>
+                <a class="footer__container-link" href="" target="_blank" rel="nofollow"><img src="./src/img/logo_instagram.svg" alt="logo instagram"></a>
+                <a class="footer__container-link" href="" target="_blank" rel="nofollow"><img src="./src/img/logo_facebook.svg" alt="logo facebook"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+
