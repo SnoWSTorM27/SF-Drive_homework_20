@@ -5,7 +5,7 @@
     
     <title>Module 20</title>
 
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="dist\main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -61,29 +61,7 @@
                 </div>    
             </section>
             
-            <script>
-                var coll = document.getElementsByClassName("frequent-questions__collapsible-wrapper-item");
-                var i;
-                
-                for (i = 0; i < coll.length; i++) {
-                  coll[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var content = this.nextElementSibling;
-                    if (content.style.maxHeight){
-                      content.style.maxHeight = null;
-                      content.style.marginTop = null;
-                      content.style.marginBottom = null; 
-                    } else {
-                      content.style.maxHeight = content.scrollHeight + "px";
-                      content.style.marginTop = "20px";
-                      content.style.marginBottom = "40px";   
-                    } 
-                        
-
-                  });
-                }
-                document.addEventListener("DOMContentLoaded", pageLoaded);
-                </script>    
+            <script src="dist/main.js"></script>    
 
         </main>
         <footer class="footer">

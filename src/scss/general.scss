@@ -1,0 +1,29 @@
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+p {
+    margin: 0px;
+}
+
+h3 {
+    @include Medium;
+    font-size: 20px;
+    line-height: 29px;
+    color: #000000;  
+  }
+  
+  h4 {
+    @include Regular;
+    font-size: 14px;
+    line-height: 21px;
+    color: #828282;  
+  }
+
+.page {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
